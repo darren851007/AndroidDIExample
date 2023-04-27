@@ -1,9 +1,7 @@
 package com.example.planetypedi
 
 import android.app.Application
-import com.example.planetypedi.di.Boeing
-import com.example.planetypedi.di.airbusModule
-import com.example.planetypedi.di.boeingModule
+import com.example.planetypedi.di.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,8 +12,7 @@ class MyPlane: Application() {
         startKoin {
             androidLogger()
             androidContext(this@MyPlane)
-            modules(boeingModule)
-            modules(airbusModule)
+            modules(boeing747Module, boeing777Module)
         }
     }
 }

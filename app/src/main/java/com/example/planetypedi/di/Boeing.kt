@@ -1,16 +1,14 @@
 package com.example.planetypedi.di
 
-import com.example.planetypedi.di.boeing.BoeingEngineInterface
-import com.example.planetypedi.di.boeing.BoeingWingsInterface
+import com.example.planetypedi.di.boeingEngine.B747Engine
 import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 
 class Boeing : KoinComponent {
-    private val boeingEngine by inject<BoeingEngineInterface>()
-    private val boeingWings by inject<BoeingWingsInterface>()
+    private val b747Engine = B747Engine()
+//    private val b777Engine = B777Engine()
 
     fun composeByBoeing() {
-        boeingEngine.getBoeingEngine()
-        boeingWings.getBoeingWings()
+//        b777Engine.getBoeingEngine()
+        b747Engine.getBoeingEngine()
     }
 }
