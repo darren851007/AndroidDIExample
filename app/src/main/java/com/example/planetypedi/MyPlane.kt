@@ -12,7 +12,7 @@ class MyPlane: Application() {
         startKoin {
             androidLogger()
             androidContext(this@MyPlane)
-            modules(boeing747Module, boeing777Module)
+            modules(boeing747Module)
         }
     }
 }

@@ -1,14 +1,19 @@
 package com.example.planetypedi.di
 
+import android.util.Log
 import com.example.planetypedi.di.boeingEngine.B747Engine
-import org.koin.core.component.KoinComponent
+import com.example.planetypedi.di.boeingEngine.B777Engine
 
-class Boeing : KoinComponent {
-    private val b747Engine = B747Engine()
-//    private val b777Engine = B777Engine()
+
+class Boeing {
+    private val engine= B777Engine()
 
     fun composeByBoeing() {
-//        b777Engine.getBoeingEngine()
-        b747Engine.getBoeingEngine()
+        engine.getBoeingEngine()
+    }
+
+    fun takeOff() {
+        engine.turnOn()
+        Log.i("Engine", "Ready to take off")
     }
 }

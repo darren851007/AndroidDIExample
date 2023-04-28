@@ -4,14 +4,14 @@ import android.util.Log
 
 class B777Engine : BoeingEngineInterface {
     override fun getBoeingEngine(){
-        Log.d("Engine", "This is Boeing 777 Engine")
+        Log.i("Engine", "This is Boeing 777 Engine")
     }
 
     override fun turnOn() {
-        Log.d("Engine", "Boeing 777 turn on")
+        Log.i("Engine", "Boeing 777 Engine turn on")
     }
 
     override fun turnOff() {
-        Log.d("Engine", "Boeing 777 turn off")
+        Log.i("Engine", "Boeing 777 Engine turn off")
     }
 }
